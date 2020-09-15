@@ -1,0 +1,14 @@
+image: archlinux
+packages:
+  - sbcl
+sources:
+  - https://git.sr.ht/~theothornhill/lisp-ci
+  - https://git.sr.ht/~theothornhill/cl-git
+tasks:
+  - setup: |
+      ./lisp-ci/lisp-ci.sh
+      mv ~/cl-git ~/quicklisp/local-projects/
+      cd ~/quicklisp/local-projects/cl-git
+  - test: |
+      cd ~/quicklisp/local-projects/cl-git
+      ./test.sh
