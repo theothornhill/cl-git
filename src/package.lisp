@@ -3,4 +3,5 @@
   (:export
    :myers
    :make-myers
-   :diff))
+   :diff
+   :myers-diff))

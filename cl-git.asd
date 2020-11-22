@@ -3,6 +3,7 @@
   :author "Theodor Thornhill <theo@thornhill.no>"
   :licence "GPLv3"
   :version "0.0.1"
+  :depends-on ("cl-ppcre")
   :components ((:module "src"
                 :components ((:file "package")
                              (:file "myers"))))
