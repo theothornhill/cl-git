@@ -102,14 +102,14 @@
 (defun myers-diff (file-a file-b)
   (diff (make-myers file-a file-b)))
 
-(defun show-diff (diff)
+(defun show-diff (diff &optional (stream t))
   (mapcar (lambda (x)
             (cond
               ((eq (car x) :del)
-               (format t "~a~a~%" '- (cadr x)))
+               (format stream "~a~a~%" '- (cadr x)))
               ((eq (car x) :eql)
-               (format t " ~a~%" (cadr x)))
+               (format stream " ~a~%" (cadr x)))
               ((eq (car x) :ins)
-               (format t "~a~a~%" '+ (caddr x)))))
+               (format stream "~a~a~%" '+ (caddr x)))))
           diff)
   nil)

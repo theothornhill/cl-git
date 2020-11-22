@@ -4,4 +4,5 @@
    :myers
    :make-myers
    :diff
-   :myers-diff))
+   :myers-diff
+   :show-diff))
